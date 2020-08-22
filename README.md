@@ -1,8 +1,8 @@
 <h1 align="center">INSTRUCCIONES</h1>
-<h3 align="left">Requerimientos</h3>
+<h3 align="left">REQUERIMIENTOS</h3>
 <ol>
   <li>Este proyecto está basado en una instalación Laravel 7. Por tanto, el servidor debe contar con los requerimientos definidos para dicha versión. Los cuales pueden encontrarse en <a href="https://laravel.com/docs/7.x/installation" target="_blank">https://laravel.com/docs/7.x/installation</a></li>
-  <li>El servidor debe tener contar con una base de datos MySQL o MariaDB disponible</li>
+  <li>El servidor debe contar con una base de datos MySQL o MariaDB disponible</li>
   <li>El servidor debe tener instalado Git</li>
   <li>El servidor debe tener instalado Composer</li>
   <li>El servidor debe tener instalado Node.js (opcional)</li>
@@ -58,7 +58,7 @@
 <h3 align="left">AFTER DEPLOY</h3>
 <ol>
   <li>Después del deploy, ejecutar: php artisan serve</li>
-  <li>Con lo anterior se lanza el servidor para el proyecto Laravel y ahora se puede acceder desde el navegador (la URL la muestra la consola después de ejecutar el comando anterior, que normalmente será: http://127.0.0.1:8000)</li>
+  <li>Con lo anterior se lanza el servidor para el proyecto Laravel y ahora se puede acceder desde el navegador según la URL mostrada por la consola después de ejecutar el comando anterior, que normalmente será: http://127.0.0.1:8000)</li>
   <li>Una vez abierto el proyecto en el navegador se podrá visualizar la lista de libros, los cuales sólo podrán editarse si se está logueado. Para esto deberán crear una cuenta usando el link <strong>Register</strong> ubicado en la parte superior derecha de la ventana del navegador.</li>
   <li>En cualquier caso, dejo las credenciales por defecto del único usuario creado:
     <ol>
