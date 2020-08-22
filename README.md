@@ -1,61 +1,62 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<h1 align="center">INSTRUCCIONES</h1>
+<h3 align="left">Requerimientos</h3>
+<ol>
+  <li>Este proyecto está basado en una instalación Laravel 7. Por tanto, el servidor debe contar con los requerimientos definidos para esta versión de Laravel. Los cuales pueden encontrarse én <a href="https://laravel.com/docs/7.x/installation" target="_blank">https://laravel.com/docs/7.x/installation</a></li>
+  <li>Crear una base de datos MySQL o MariaDB</li>
+  <li>El servidor debe tener instalado Git</li>
+  <li>El servidor debe tener instalado Composer</li>
+  <li>El servidor debe tener instalado Node.js (opcional)</li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<h3 align="center">DEPLOY</h3>
+<p align="left">Deben seguirse estas instrucciones para hacer deploy de este proyecto en su máquina local:</p>
+<ol>
+  <li>Abrir la consola del sistema operativo (si es Windows, preferentemente abrir el Gitbash)</li>
+  <li>Mediante la consola acceder a la carpeta donde se guarden los proyectos Laravel (preferentemente dentro de la carpeta "htdocs")</li>
+  <li>Descargar el proyecto ejecutando: git clone https://github.com/dduranr/dit.git</li>
+  <li>Accedemos a la carpeta del proyecto ejecutando: cd dit</li>
+  <li>
+    Editar el archivo .env ubicado en la raíz del proyecto, y se modificar los siguientes valores según las especificaciones locales (de nuestro servidor y base de datos):
+    <ol>
+      <li>APP_ENV=production</li>
+      <li>APP_DEBUG=false</li>
+      <li>APP_URL=http://localhost</li>
+      <li>DB_HOST=127.0.0.1</li>
+      <li>DB_PORT=3306</li>
+      <li>DB_DATABASE=dit</li>
+      <li>DB_USERNAME=root</li>
+      <li>DB_PASSWORD=</li>
+    </ol>
+  </li>
+  <li>Instalar dependencias (son las que van a parar a la carpeta "vendor"), ejecutando: php composer install --optimize-autoloader --no-dev</li>
+  <li>Generar key de la app ejecutando: php artisan key:generate</li>
+  <li>Ejecutar: php composer dumpautoload</li>
+  <li>
+    Ejecutar migraciones:
+    <ol>
+      <li>Migrar base de datos: php artisan migrate</li>
+      <li>Sólo después de hacer las pruebas con la app, editando, borrando los libros, para regresar la base de datos tal como estaba desde un principio, ejecutar: php artisan migrate:refresh --seed</li>
+    </ol>
+  </li>
+  <li>
+    Limpiar caché:
+    <ol>
+      <li>php artisan optimize:clear</li>
+      <li>php artisan view:clear</li>
+      <li>php artisan route:clear</li>
+      <li>php artisan clear-compiled</li>
+      <li>php artisan auth:clear-resets</li>
+      <li>php artisan cache:clear</li>
+      <li>php artisan config:clear</li>
+      <li>php artisan event:clear</li>
+      <li>php artisan queue:flush</li>
+    </ol>
+  </li>
+</ol>
