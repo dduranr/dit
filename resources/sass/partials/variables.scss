@@ -1,0 +1,59 @@
+
+// El siguiente mixin tiene dos posibles valores para el único parámetro:
+// 		- content-box --> Equivale al modelo de caja normal
+// 		- border-box  --> EL padding y border no aumentan el ancho del elemento
+@mixin boxSizing($borderBox) {
+    -webkit-box-sizing: $borderBox;
+     -moz-box-sizing: $borderBox;
+      -ms-box-sizing: $borderBox;
+       -o-box-sizing: $borderBox;
+          box-sizing: $borderBox;
+    }
+    
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+
+@mixin transitiondelay($transition) {
+    -webkit-transition-delay: $transition;
+    -moz-transition-delay: $transition;
+    -ms-transition-delay: $transition;
+    -o-transition-delay: $transition;
+    transition-delay: $transition;
+}
+
+@mixin displayBox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+}
+
+
+@mixin radius($radio) {
+    -webkit-border-radius: $radio;
+    -moz-border-radius: $radio;
+    -ms-border-radius: $radio;
+    -o-border-radius: $radio;
+    border-radius: $radio;
+}
+
+@mixin centrarXY($display, $color, $position, $top, $left, $align, $translateY, $translateX, $z-index) {
+	> * {color: $color;}
+	display: $display;
+	position: $position;
+	top: $top;
+	left: $left;
+	text-align: $align;
+	-webkit-transform: translate($translateX, $translateY);
+	-ms-transform: translate($translateX, $translateY);
+	transform: translate($translateX, $translateY);
+	z-index: $z-index;
+}
+

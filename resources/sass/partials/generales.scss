@@ -1,0 +1,21 @@
+body {
+    footer {
+        .main-loading {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,.8);
+            img {
+                @include centrarXY(block, #000, relative, 50%, 50%, center, -50%, -50%, 9999);
+            }
+        }
+    }
+}
+
+.alert-gral-error,
+.alert-gral-success {
+    display: none;
+}
