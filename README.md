@@ -1,38 +1,31 @@
 <h1 align="center">INSTRUCCIONES</h1>
 <h3 align="left">Requerimientos</h3>
 <ol>
-  <li>Este proyecto está basado en una instalación Laravel 7. Por tanto, el servidor debe contar con los requerimientos definidos para esta versión de Laravel. Los cuales pueden encontrarse én <a href="https://laravel.com/docs/7.x/installation" target="_blank">https://laravel.com/docs/7.x/installation</a></li>
-  <li>Crear una base de datos MySQL o MariaDB</li>
+  <li>Este proyecto está basado en una instalación Laravel 7. Por tanto, el servidor debe contar con los requerimientos definidos para dicha versión. Los cuales pueden encontrarse en <a href="https://laravel.com/docs/7.x/installation" target="_blank">https://laravel.com/docs/7.x/installation</a></li>
+  <li>El servidor debe tener contar con una base de datos MySQL o MariaDB disponible</li>
   <li>El servidor debe tener instalado Git</li>
   <li>El servidor debe tener instalado Composer</li>
   <li>El servidor debe tener instalado Node.js (opcional)</li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
 </ol>
 
-<h3 align="center">DEPLOY</h3>
+<h3 align="left">DEPLOY</h3>
 <p align="left">Deben seguirse estas instrucciones para hacer deploy de este proyecto en su máquina local:</p>
 <ol>
   <li>Abrir la consola del sistema operativo (si es Windows, preferentemente abrir el Gitbash)</li>
   <li>Mediante la consola acceder a la carpeta donde se guarden los proyectos Laravel (preferentemente dentro de la carpeta "htdocs")</li>
   <li>Descargar el proyecto ejecutando: git clone https://github.com/dduranr/dit.git</li>
-  <li>Accedemos a la carpeta del proyecto ejecutando: cd dit</li>
+  <li>Accedemos a la carpeta del proyecto. El proyecto se llama <strong>dit</strong>, por lo que se debe ejecutar: cd dit</li>
   <li>
-    Editar el archivo .env ubicado en la raíz del proyecto, y se modificar los siguientes valores según las especificaciones locales (de nuestro servidor y base de datos):
+    Editar el archivo <strong>.env</strong> ubicado en la raíz del proyecto, y se modifican los siguientes valores según las especificaciones locales (es decir, las especificaciones de nuestro servidor y base de datos):
     <ol>
-      <li>APP_ENV=production</li>
-      <li>APP_DEBUG=false</li>
-      <li>APP_URL=http://localhost</li>
-      <li>DB_HOST=127.0.0.1</li>
-      <li>DB_PORT=3306</li>
-      <li>DB_DATABASE=dit</li>
-      <li>DB_USERNAME=root</li>
-      <li>DB_PASSWORD=</li>
+      <li><strong>APP_ENV</strong>=production</li>
+      <li><strong>APP_DEBUG</strong>=false</li>
+      <li><strong>APP_URL</strong>=http://localhost</li>
+      <li><strong>DB_HOST</strong>=127.0.0.1</li>
+      <li><strong>DB_PORT</strong>=3306</li>
+      <li><strong>DB_DATABASE</strong>=dit</li>
+      <li><strong>DB_USERNAME</strong>=root</li>
+      <li><strong>DB_PASSWORD</strong>=</li>
     </ol>
   </li>
   <li>Instalar dependencias (son las que van a parar a la carpeta "vendor"), ejecutando: php composer install --optimize-autoloader --no-dev</li>
@@ -57,6 +50,20 @@
       <li>php artisan config:clear</li>
       <li>php artisan event:clear</li>
       <li>php artisan queue:flush</li>
+    </ol>
+  </li>
+  <li>Eso es todo.</li>
+</ol>
+
+<h3 align="left">AFTER DEPLOY</h3>
+<ol>
+  <li>Después del deploy, ejecutar: php artisan serve</li>
+  <li>Con lo anterior se lanza el servidor para el proyecto Laravel y ahora se puede acceder desde el navegador (la URL la muestra la consola después de ejecutar el comando anterior, que normalmente será: http://127.0.0.1:8000)</li>
+  <li>Una vez abierto el proyecto en el navegador se podrá visualizar la lista de libros, los cuales sólo podrán editarse si se está logueado. Para esto deberán crear una cuenta usando el link <strong>Register</strong> ubicado en la parte superior derecha de la ventana del navegador.</li>
+  <li>En cualquier caso, dejo las credenciales por defecto del único usuario creado:
+    <ol>
+      <li><strong>Email</strong>: official.dduran@gmail.com</li>
+      <li><strong>Contraseña</strong>: abc123</li>
     </ol>
   </li>
 </ol>
