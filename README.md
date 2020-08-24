@@ -58,7 +58,7 @@
 <h3 align="left">AFTER DEPLOY</h3>
 <ol>
   <li>Después del deploy, ejecutar: php artisan serve</li>
-  <li>Con lo anterior se lanza el servidor para el proyecto Laravel y ahora se puede acceder desde el navegador según la URL mostrada por la consola después de ejecutar el comando anterior, que normalmente será: http://127.0.0.1:8000)</li>
+  <li>Con lo anterior se lanza el servidor para el proyecto Laravel y ahora se puede acceder desde el navegador según la URL mostrada por la consola después de ejecutar el comando anterior, que normalmente será: http://127.0.0.1:8000</li>
   <li>Una vez abierto el proyecto en el navegador se podrá visualizar la lista de libros, los cuales sólo podrán editarse si se está logueado. Para esto deberán crear una cuenta usando el link <strong>Register</strong> ubicado en la parte superior derecha de la ventana del navegador.</li>
   <li>En cualquier caso, dejo las credenciales por defecto del único usuario creado:
     <ol>
